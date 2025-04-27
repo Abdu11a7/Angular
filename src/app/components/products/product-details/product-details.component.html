@@ -1,0 +1,30 @@
+<div class="container p-5 mt-4 rounded shadow">
+  <h1 class="text-center text-warning text-dark">
+    Product Details :{{ productId }}
+  </h1>
+  <p class="lead fs-3 mt-2">
+    Product Name : <strong class="text-uppercase">{{ product.name }}</strong>
+  </p>
+  <p class="lead fs-3 mt-2">
+    Product price :
+    <strong class="text-uppercase">
+      {{ product.price | currency }}
+    </strong>
+  </p>
+  <p class="lead fs-3 mt-2">
+    Product quantity :
+    <strong class="text-uppercase">
+      {{ product.quantity }}
+    </strong>
+  </p>
+  <div>
+    <i class="text-warning bi bi-star-fill fw-bold fs-4"></i>
+    <i class="text-warning bi bi-star-fill fs-4"></i>
+    <i class="text-warning bi bi-star-fill fs-4"></i>
+    <i class="text-warning bi bi-star-fill fs-4"></i>
+    <i class="text-warning bi bi-star-fill fs-4"></i>
+  </div>
+  <button class="mt-4 btn btn-dark" [routerLink]="['/products']">
+    Back to Products
+  </button>
+</div>

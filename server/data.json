@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ali"
+    }
+  ],
+  "products": [
+    {
+      "name": "phone",
+      "price": "500",
+      "quantity": "20",
+      "id": "eac0"
+    },
+    {
+      "id": "8c07",
+      "name": "Oppo",
+      "price": 1000,
+      "quantity": 22
+    },
+    {
+      "name": "Oppo 99",
+      "price": "2323",
+      "quantity": "23",
+      "id": "4503"
+    },
+    {
+      "id": "8bd7",
+      "name": "ewrrww",
+      "price": 34556,
+      "quantity": 232
+    },
+    {
+      "id": "cfda",
+      "name": "Oppowq",
+      "price": 1000,
+      "quantity": 2
+    }
+  ]
+}

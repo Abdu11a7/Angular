@@ -1,0 +1,66 @@
+<div class="container p-2 mt-5 px-3 py-0">
+  <h1 class="text-center text-muted">Our Products</h1>
+  <div class="row mt-5 g-2 align-items-center">
+    <div class="col-sm-6">
+      <a class="btn btn-outline-dark" [routerLink]="['/products', 0, 'edit']">
+        Add New Product
+      </a>
+    </div>
+    <div class="col-sm-6 d-flex align-items-center justify-content-between">
+      <span><i class="bi bi-funnel"></i> </span>
+      <input
+        type="text"
+        placeholder="Size"
+        class="form-control w-25"
+        name="size"
+        [(ngModel)]="size"
+      />
+      <input
+        type="text"
+        placeholder="category"
+        class="form-control w-25"
+        name="category"
+        [(ngModel)]="category"
+      />
+      <button class="btn btn-dark" (click)="filterBy()">Filter By</button>
+    </div>
+    @if (products.length>0) {
+    <table class="table mt-4 mb-0 text-center">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of products; track product.id) {
+        <tr>
+          <th scope="row p-5 ">{{ product.id }}</th>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.quantity }}</td>
+
+          <td>
+            <i
+              [routerLink]="['/products', product.id, 'edit']"
+              class="fs-4 mx-1 text-info bi bi-pencil-square"
+            ></i>
+            <i
+              [routerLink]="['/products', product.id]"
+              class="fs-4 mx-1 text-warning bi bi-eye-fill"
+            ></i>
+            <i
+              (click)="deleteHandler(product.id)"
+              class="fs-4 mx-1 text-danger bi bi-trash3-fill"
+            ></i>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+    }
+  </div>
+</div>

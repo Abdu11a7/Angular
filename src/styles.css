@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.active {
+  background-color: #212529 !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  text-align: center !important;
+  transition: all 0.3s !important;
+  margin-inline: auto;
+}
+.active:hover {
+  background-color: #424649 !important;
+}
+
+i {
+  cursor: pointer;
+}
